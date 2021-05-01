@@ -19,9 +19,10 @@ function jump() {
                 if (position <= 0) {
                     clearInterval(downInterval);
                     isJumping = false;
+                } else {
+                    position -= 20;
+                    dino.style.bottom = position + 'px';
                 }
-                position -= 20;
-                dino.style.bottom = position + 'px';
             }, 20);
         } else {
             position += 20;
@@ -59,4 +60,4 @@ function createCacto() {
 }
 
 createCacto();
-document.addEventListener("keyup", handlekeyup);
+document.addEventListener("keydown", handlekeyup);
