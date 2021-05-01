@@ -2,7 +2,7 @@ const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
 let isJumping = false;
 let position = 0;
-function handlekeyup(event) {
+function handlekeydown(event) {
 
     if (event.keyCode == 32)
         if (!isJumping)
@@ -60,4 +60,4 @@ function createCacto() {
 }
 
 createCacto();
-document.addEventListener("keydown", handlekeyup);
+document.addEventListener("keydown", handlekeydown);
